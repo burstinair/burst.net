@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4ED89C66-0266-43A8-9AA9-D4BF44C1DF6C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Burst.Web</RootNamespace>
+    <AssemblyName>Burst.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseException.cs" />
+    <Compile Include="CheckCodeManager.cs" />
+    <Compile Include="CustomSiteMapPath.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="IServiceInvoker.cs" />
+    <Compile Include="MvcHelperExtension.cs" />
+    <Compile Include="PageEventHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoredPic.cs" />
+    <Compile Include="SuccessException.cs" />
+    <Compile Include="UI\AuthenticationPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Controls\CMS\ListSection.cs" />
+    <Compile Include="UI\Controls\CMS\Section.cs" />
+    <Compile Include="UI\Controls\Column.cs" />
+    <Compile Include="UI\Controls\ColumnBase.cs" />
+    <Compile Include="UI\Controls\CustomColumn.cs" />
+    <Compile Include="UI\Controls\CustomField.cs" />
+    <Compile Include="UI\Controls\Field.cs" />
+    <Compile Include="UI\Controls\FieldBase.cs" />
+    <Compile Include="UI\Controls\Form.cs" />
+    <Compile Include="UI\Controls\IRepeater.cs" />
+    <Compile Include="UI\Controls\ListView.cs" />
+    <Compile Include="UI\Controls\Pager.cs" />
+    <Compile Include="UI\Controls\PasswordField.cs" />
+    <Compile Include="UI\Controls\Repeater.cs" />
+    <Compile Include="UI\Controls\Searcher.cs" />
+    <Compile Include="UI\Controls\SearchField.cs" />
+    <Compile Include="UI\Controls\SearchFields\DateTime.cs" />
+    <Compile Include="UI\Controls\SearchFields\Equals.cs" />
+    <Compile Include="UI\Controls\SearchFields\Like.cs" />
+    <Compile Include="UI\Controls\SubmitButton.cs" />
+    <Compile Include="UI\Controls\Table.cs" />
+    <Compile Include="UI\Controls\Tip.cs" />
+    <Compile Include="UI\CustomSiteMapPath.cs" />
+    <Compile Include="UI\Controls\IField.cs" />
+    <Compile Include="UI\Page.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Events.cs" />
+    <Compile Include="UI\RewritePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserBase.cs" />
+    <Compile Include="WebUtils.cs" />
+    <Compile Include="XSSException.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Burst.Data\Burst.Data.csproj">
+      <Project>{7EA6876E-C0D8-454D-A0C0-01098B32AE9B}</Project>
+      <Name>Burst.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Burst\Burst.csproj">
+      <Project>{124E1B7C-EC4C-4E6A-BDA4-3FCB0AEEF18B}</Project>
+      <Name>Burst</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

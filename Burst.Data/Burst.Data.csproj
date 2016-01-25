@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7EA6876E-C0D8-454D-A0C0-01098B32AE9B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Burst.Data</RootNamespace>
+    <AssemblyName>Burst.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command.cs" />
+    <Compile Include="CommandBuilder\Builder.cs" />
+    <Compile Include="CommandBuilder\Compare.cs" />
+    <Compile Include="CommandBuilder\Insert.cs" />
+    <Compile Include="CommandBuilder\MultiSelect.cs" />
+    <Compile Include="CommandBuilder\Order.cs" />
+    <Compile Include="CommandBuilder\Page.cs" />
+    <Compile Include="CommandBuilder\Select.cs" />
+    <Compile Include="CommandBuilder\Where.cs" />
+    <Compile Include="CommandException.cs" />
+    <Compile Include="Connection.cs" />
+    <Compile Include="DbConnectException.cs" />
+    <Compile Include="Entity\DataEntityException.cs" />
+    <Compile Include="Entity\DataEntityFieldInfo.cs" />
+    <Compile Include="Entity\IDataEntity.cs" />
+    <Compile Include="Entity\IndexFieldException.cs" />
+    <Compile Include="Entity\IndexFieldAttribute.cs" />
+    <Compile Include="Entity\ReflectionDataEntity.cs" />
+    <Compile Include="Entity\DataEntity.cs" />
+    <Compile Include="Entity\DataEntityAttribute.cs" />
+    <Compile Include="Entity\DataFieldAttribute.cs" />
+    <Compile Include="Entity\Extension.cs" />
+    <Compile Include="Entity\DataEntityBase.cs" />
+    <Compile Include="Entity\DataOwnerFieldAttribute.cs" />
+    <Compile Include="Extension.cs" />
+    <Compile Include="IDbAdapter.cs" />
+    <Compile Include="DbProvider.cs" />
+    <Compile Include="Func.cs" />
+    <Compile Include="MSAccess\MSAccessAdapter.cs" />
+    <Compile Include="MSAccess\MSAccessSchema.cs" />
+    <Compile Include="MSSQL\MSSQLSchema.cs" />
+    <Compile Include="MySQL\MySQLAdapter.cs" />
+    <Compile Include="MSSQL\MSSQLAdapter.cs" />
+    <Compile Include="MySQL\MySQLSchema.cs" />
+    <Compile Include="Schema\ColumnInfo.cs" />
+    <Compile Include="Schema\DbSchema.cs" />
+    <Compile Include="Schema\DbSchemaException.cs" />
+    <Compile Include="Schema\TableInfo.cs" />
+    <Compile Include="SQLite\SQLiteSchema.cs" />
+    <Compile Include="Transaction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLite\SQLiteAdapter.cs" />
+    <Compile Include="Utils\DbCache.cs" />
+    <Compile Include="Utils\DbConfiguration.cs" />
+    <Compile Include="Utils\DbConfigurationAttribute.cs" />
+    <Compile Include="Utils\DbLog.cs" />
+    <Compile Include="Utils\Identity.cs" />
+    <Compile Include="Utils\Principal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Burst\Burst.csproj">
+      <Project>{124E1B7C-EC4C-4E6A-BDA4-3FCB0AEEF18B}</Project>
+      <Name>Burst</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Oracle\" />
+    <Folder Include="PostgreSQL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="key.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

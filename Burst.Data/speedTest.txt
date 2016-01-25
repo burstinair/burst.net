@@ -1,0 +1,48 @@
+Words
+
+
+[Insert]
+
+Burst.Data:
+    10      50ms
+    100     50ms
+    1000    150ms
+    10000   700ms
+    100000  6000ms
+
+Burst.Data.Entity:
+    10      300ms
+    100     300ms
+    1000    500ms
+    10000   1900ms
+    100000  18000ms
+
+[Select]
+
+SQLiteDataReader without fill
+    10      0ms
+    100     0ms
+    1000    5ms
+    10000   15ms
+    100000  150ms
+
+SQLiteDataAdapter
+    10      0ms
+    100     0ms
+    1000    15ms
+    10000   140ms
+    100000  1900ms
+
+Burst.Data:
+    10      0ms
+    100     5ms
+    1000    10ms
+    10000   200ms
+    100000  3000ms
+
+Burst.Data.Entity:
+    10      0ms
+    100     5ms
+    1000    80ms
+    10000   1300ms
+    100000  15000ms
